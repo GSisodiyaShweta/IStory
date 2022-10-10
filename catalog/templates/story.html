@@ -2,29 +2,29 @@
 
 <html lang="en-us" dir="ltr">
 <head>
-<title>Interactive Story: Don't Shoot</title>
-  <link rel="stylesheet" href="/static/css/base.css">
+    <title>Interactive Story: Don't Shoot</title>
+    <link rel="stylesheet" href="/static/css/base.css">
 
-  <link rel="stylesheet" href="/static/css/dark_mode.css">
-
-
-  <link rel="stylesheet" href="/static/css/nav_sidebar.css">
-  <!--<link rel="stylesheet" href="/static/css/style.css" />-->
-  <script src="/static/css/nav_sidebar.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.13.1/js-yaml.min.js" defer></script>
-  <script src="/static/css/engine.js" defer></script>
-  <script src="/static/css/narrator.js" defer></script>
-
-  <link rel="stylesheet" href="/static/css/login.css">
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <link rel="stylesheet" href="/static/css/responsive.css">
+    <link rel="stylesheet" href="/static/css/dark_mode.css">
 
 
-<meta name="robots" content="NONE,NOARCHIVE">
+    <link rel="stylesheet" href="/static/css/nav_sidebar.css">
+    <!--<link rel="stylesheet" href="/static/css/style.css" />-->
+    <script src="/static/css/nav_sidebar.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.13.1/js-yaml.min.js" defer></script>
+    <script src="/static/css/engine.js" defer></script>
+    <script src="/static/css/narrator.js" defer></script>
+
+    <link rel="stylesheet" href="/static/css/login.css">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+
+    <meta name="robots" content="NONE,NOARCHIVE">
 </head>
 
 <body class=" login"
-  data-admin-utc-offset="0" data-new-gr-c-s-check-loaded="14.1082.0" data-gr-ext-installed>
+      data-admin-utc-offset="0" data-new-gr-c-s-check-loaded="14.1082.0" data-gr-ext-installed>
 
 <!-- Container -->
 <div id="container">
@@ -35,7 +35,7 @@
     <div id="header">
         <div id="branding">
 
-<h1 id="site-name">Don't Shoot</a></h1>
+            <h1 id="site-name">Don't Shoot</a></h1>
 
         </div>
 
@@ -45,72 +45,52 @@
     <!-- END Header -->
 
 
-
     <div class="main" id="main">
 
 
-
-      <div class="content">
-
+        <div class="content">
 
 
-        <!-- Content -->
-        <div id="content" class="colM">
+            <!-- Content -->
+            <div id="content" class="colM">
 
 
+                <div id="content-main">
 
 
+                    <h1 id="titleContainer"></h1>
+                    <div id="descriptionsContainer"></div>
+                    <div id="choicesContainer"></div>
+                    <div id="record">
+                        <!--       <input
+                                style="
+                                  height: 40px;
+                                  width: 120px;
+                                  text-align: center;
+                                  margin-left: 440px;
+                                "
+                                type="submit"
+                                class="btn btn-primary"
+                                value="Save Score"
+                                onclick="save_choices"
+                              /> -->
+                        <input
+                                type="hidden"
+                                style="outline-style: none"
+                                id="players_choices"
+                                name="players_choices"
+                        />
+                    </div>
 
 
+                </div>
 
 
-<div id="content-main">
-
-
-    <input
-        style="
-          height: 40px;
-          width: 120px;
-          text-align: center;
-          margin-left: 40px;
-        "
-        type="submit"
-        value="Save Score"
-        onclick="save_choices()"
-      /> -->
-    <h1 id="titleContainer"></h1>
-    <div id="descriptionsContainer"></div>
-    <div id="choicesContainer"></div>
-    <div id="record">
-<!--       <input
-        style="
-          height: 40px;
-          width: 120px;
-          text-align: center;
-          margin-left: 440px;
-        "
-        type="submit"
-        class="btn btn-primary"
-        value="Save Score"
-        onclick="save_choices"
-      /> -->
-    <input
-      type="hidden"
-      style="outline-style: none"
-      id="players_choices"
-      name="players_choices"
-    />
-    </div>
-
-
-</div>
-
-
-          <br class="clear">
+                <br class="clear">
+            </div>
+            <!-- END Content -->
+            <div id="footer"></div>
         </div>
-        <!-- END Content -->
-        <div id="footer"></div>
-      </div>
     </div>
 </div>
 <!-- END Container -->
