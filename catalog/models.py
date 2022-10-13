@@ -1,6 +1,9 @@
 from django.db import models
 from django.urls import reverse  # Used to generate URLs by reversing the URL patterns
+from django.contrib.auth.models import User
 
+
+# Create your models here.
 
 class Player(models.Model):
     """Model representing a book (but not a specific copy of a book)."""
@@ -15,4 +18,3 @@ class Player(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return self.your_name
-# Create your models here.

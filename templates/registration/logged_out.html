@@ -36,8 +36,6 @@
             <h1 id="site-name"><a href="">Don't Shoot</a></h1>
 
         </div>
-
-
     </div>
 
     <!-- END Header -->
@@ -54,31 +52,7 @@
 
 
                 <div id="content-main">
-
-                    <!--action="/admin/login/?next=/admin/" -->
-
-                    <form action="{% url 'login' %}" method="post">
-                        <!--<input type="hidden" name="csrfmiddlewaretoken" value="vwNqOXPl2qOwekTTI5yojhIWPsFHMV2DInly2brNs92SBjikzp8ljN9QTSNI1qew">-->
-                        {% csrf_token %}
-                        <table>
-                            {{ form.as_table }}
-                        </table>
-                        <input type="submit" value="Play">
-                        <!--    <div class="form-row">-->
-
-                        <!--    <label  class="required">Your name:</label> <input type="text" name="username"  maxlength="150" >-->
-                        <!--  </div>-->
-                        <!--  <div class="form-row">-->
-
-                        <!--    <label  class="required">Your Email:</label> <input type="email" name="email" >-->
-                        <!--    &lt;!&ndash;<input type="text" name="next" value="/admin/">&ndash;&gt;-->
-                        <!--  </div>-->
-
-
-                        <!--  <div class="submit-row">-->
-                        <!--    <input type="submit" value="Play">-->
-                        <!--  </div>-->
-                    </form>
+                    <p> Thanks for playing.</p>
 
                 </div>
 

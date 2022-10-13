@@ -11,6 +11,10 @@ class PlayerEntryForm(ModelForm):
         labels = {'your_name': _('Name'),
                   'your_email': _('Email')}
 
+        def __int__(self):
+            self.fields['password1'].required = False
+            self.fields['password2'].required = False
+
     def save(self, commit=True):
         player = super(PlayerEntryForm, self).save(commit=False)
         player.your_name = self.cleaned_data["your_name"]
@@ -18,5 +22,3 @@ class PlayerEntryForm(ModelForm):
         if commit:
             player.save()
         return player
-
-

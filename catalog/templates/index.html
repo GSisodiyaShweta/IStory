@@ -2,99 +2,74 @@
 
 <html lang="en-us" dir="ltr">
 <head>
-<title>Interactive Story: Don't Shoot</title>
-<link rel="stylesheet" href="/static/css/base.css">
+    <title>Interactive Story: Don't Shoot</title>
+    <link rel="stylesheet" href="/static/css/base.css">
 
-  <link rel="stylesheet" href="/static/css/dark_mode.css">
-
-
-  <link rel="stylesheet" href="/static/css/nav_sidebar.css">
-  <script src="/static/js/nav_sidebar.js" defer></script>
-
-<link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="/static/css/dark_mode.css">
 
 
+    <link rel="stylesheet" href="/static/css/nav_sidebar.css">
+    <script src="/static/js/nav_sidebar.js" defer></script>
 
+    <link rel="stylesheet" href="/static/css/login.css">
 
 
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="/static/css/responsive.css">
-    
 
-<meta name="robots" content="NONE,NOARCHIVE">
+
+    <meta name="robots" content="NONE,NOARCHIVE">
 </head>
 
 <body class=" login"
-  data-admin-utc-offset="0">
+      data-admin-utc-offset="0">
 
 <!-- Container -->
 <div id="container">
 
-    
+
     <!-- Header -->
-    
+
     <div id="header">
         <div id="branding">
-        
-<h1 id="site-name"><a href="">Don't Shoot</a></h1>
+
+            <h1 id="site-name"><a href="">Don't Shoot</a></h1>
+            <ul class="sidebar-nav">
+                {% if user.is_authenticated %}
+                <li>User: {{ user.get_username }}</li>
+                <li><a href="{% url 'logout' %}?next={{ request.path }}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}?next={{ request.path }}">Login</a></li>
+                {% endif %}
+            </ul>
 
         </div>
-        
-        
+
+
     </div>
-    
+
     <!-- END Header -->
-    
-    
+
 
     <div class="main" id="main">
-      
-        
-      
-      <div class="content">
-        
-          
-        
-        <!-- Content -->
-        <div id="content" class="colM">
+        <div class="content">
+            <!-- Content -->
+            <div id="content" class="colM">
+
+                <div id="content-main">
+                    <p> This project demonstrates a tiny interactive fiction engine supporting inventory mechanics. The
+                        descriptions of a location and the choices present at that location can be filtered by requiring
+                        the player to be with or without certain items. Locations may provide or consume items upon
+                        arrival. </p>
+                    <a href="story"><input type="submit" value="Play"></a>
+                </div>
 
 
-
-
-
-
-
-
-<div id="content-main">
-
-<!--action="/admin/login/?next=/admin/" -->
-
-<!--<form action="" method="post" id="login-form"> &lt;!&ndash;<input type="hidden" name="csrfmiddlewaretoken" value="vwNqOXPl2qOwekTTI5yojhIWPsFHMV2DInly2brNs92SBjikzp8ljN9QTSNI1qew">&ndash;&gt;-->
-<!--  <div class="form-row">-->
-
-<!--    <label  class="required">Your name:</label> <input type="text" name="username"  maxlength="150" >-->
-<!--  </div>-->
-<!--  <div class="form-row">-->
-
-<!--    <label  class="required">Your Email:</label> <input type="email" name="email" >-->
-<!--    &lt;!&ndash;<input type="text" name="next" value="/admin/">&ndash;&gt;-->
-<!--  </div>-->
-
-
-<!--  <div class="submit-row">-->
-<!--    <input type="submit" value="Play">-->
-<!--  </div>-->
-<!--</form>-->
-    <p> This project demonstrates a tiny interactive fiction engine supporting inventory mechanics. The descriptions of a location and the choices present at that location can be filtered by requiring the player to be with or without certain items. Locations may provide or consume items upon arrival. </p>
-    <a href="register"><input type="submit" value="Play"></a>
-</div>
-
-          
-          <br class="clear">
+                <br class="clear">
+            </div>
+            <!-- END Content -->
+            <div id="footer"></div>
         </div>
-        <!-- END Content -->
-        <div id="footer"></div>
-      </div>
     </div>
 </div>
 <!-- END Container -->

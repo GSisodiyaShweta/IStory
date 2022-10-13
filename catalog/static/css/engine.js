@@ -39,8 +39,7 @@ let engine = {
   save_choices : function (){
   console.log("Yess")
   document.getElementById('players_choices').value = arrayOfChoices;
-  }
-
+  },
   setBackground: function (url_tag) {
     /*  console.log(url_tag);*/
     descriptionsContainer.style.backgroundImage = url_tag;
